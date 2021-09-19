@@ -17,7 +17,7 @@ fs.readdir("./commands/", (err, files) => {
     if (jsFiles.length <= 0) {
         console.log("Kon geen files vinden");
         return;
-    }
+    } 
 
     jsFiles.forEach((f, i) => { 
 
