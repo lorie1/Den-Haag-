@@ -62,6 +62,54 @@ return guildMemberAdd.send(DMembed);
 
 
 
+
+
 })
 
-bot.login(process.env.token); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bot.on("ready", async () => {
+
+    console.log(`${bot.user.username} doet het!.`);
+
+    bot.user.setActivity(`Bot maker: Lorie#1093`, { type: `LISTENING` });
+
+});
+
+
+bot.on("message", async message => {
+
+    if (message.author.bot) return;
+
+    if (message.channel.type === "dm") return;
+
+    var prefix = botConfig.prefix;
+
+    var messageArray = message.content.split(" ");
+
+    var command = messageArray[0];
+    
+    var arguments = messageArray.slice(1);
+    
+    var commands = bot.commands.get(command.slice(prefix.length));
+
+    if (commands) commands.run(bot, message, arguments);
+
+
+
+
+});
+
+bot.login(process.env.token);
