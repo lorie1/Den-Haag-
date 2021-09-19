@@ -6,8 +6,8 @@ module.exports.run = async (client, message, args) => {
             .setDescription("Hallo, wij zijn Den Haag")
             .setColor("#0b03fc")
             .setDescription("**Server naam:** DenHaag {BETA}")
-            .addField("Je bent deze server gejoind op", message.member.joinedAt, true)
-            .addField("Totaal memebers", message.guild.memberCount, true)
+            .setDescription("Je bent deze server gejoind op", message.member.joinedAt)
+            .setDescription("Totaal memebers", message.guild.memberCount)
             .setTimestamp();
 
         return message.channel.send(serverEmbed);
