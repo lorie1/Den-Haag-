@@ -65,7 +65,7 @@ return guildMemberAdd.send(DMembed);
 
 
 })
-
+ 
 
 
 
