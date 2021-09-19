@@ -4,7 +4,7 @@ const botConfig = require("./botconfig.json");
 const fs = require("fs");
 const { SlowBuffer } = require("buffer");
 
-bot.login(process.env.token)
+bot.login(process.env.token);
 
 const bot = new discord.Client();
 bot.commands = new discord.Collection();
